@@ -46,7 +46,6 @@ const Contact = () => {
                                 variant="outlined"
                                 multiline
                                 rows={4}
-                                // defaultValue="Default Value"
                             />
                             <button className="contact__form__btn">Send</button>
                         </form>
