@@ -18,6 +18,7 @@ import portfolio4 from "@/assets/header/portfolio-4.svg";
 import language1 from "@/assets/header/language-1.svg";
 import language2 from "@/assets/header/language-2.svg";
 import "./header.scss";
+import { useTranslation } from "react-i18next";
 
 const sections = [
     { id: "services" },
@@ -37,8 +38,8 @@ const sections = [
 
 const Header = () => {
     const [show, setShow] = useState(false);
-
     const [activeSection, setActiveSection] = useState("");
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -73,7 +74,7 @@ const Header = () => {
                         <div>
                             <Image
                                 width={100}
-                                height={""}
+                                height={50}
                                 src={logo}
                                 alt="logo"
                             />
@@ -87,7 +88,7 @@ const Header = () => {
                             }`}
                             onClick={() => setShow(false)}
                         >
-                            <Link href={"#services"}>Direction</Link>
+                            <Link href={"#services"}>{t("Direction")}</Link>
                         </li>
                         <li
                             className={`header__item ${
@@ -95,7 +96,7 @@ const Header = () => {
                             }`}
                             onClick={() => setShow(false)}
                         >
-                            <Link href={"#team"}>Command</Link>
+                            <Link href={"#team"}>{t("Command")}</Link>
                         </li>
                         <li
                             className={`header__item ${
@@ -113,7 +114,8 @@ const Header = () => {
                             }`}
                         >
                             <Link href={"#mobile"}>
-                                <span>Services</span> <RiArrowDropDownLine />
+                                <span>{t("Services")}</span>{" "}
+                                <RiArrowDropDownLine />
                             </Link>
                             <ul
                                 className="header__dropdown"
@@ -196,7 +198,7 @@ const Header = () => {
                             }`}
                             onClick={() => setShow(false)}
                         >
-                            <Link href={"#tools"}>Tools</Link>
+                            <Link href={"#tools"}>{t("Tools")}</Link>
                         </li>
                         <li
                             className={`header__item ${
@@ -204,7 +206,7 @@ const Header = () => {
                             }`}
                             onClick={() => setShow(false)}
                         >
-                            <Link href={"#clients"}>Clients</Link>
+                            <Link href={"#clients"}>{t("Clients")}</Link>
                         </li>
                         <li
                             className={`header__item ${
@@ -274,11 +276,17 @@ const Header = () => {
                         </li>
                         <li className="header__item">
                             <Link href={"#"}>
-                                <span>Language</span> <RiArrowDropDownLine />
+                                <span>{t("Language")}</span>{" "}
+                                <RiArrowDropDownLine />
                             </Link>
                             <ul className="header__dropdown">
                                 <li>
-                                    <Link href={"#"}>
+                                    <Link
+                                        href={"#"}
+                                        onClick={(e) =>
+                                            i18n.changeLanguage("ru")
+                                        }
+                                    >
                                         <Image
                                             width={40}
                                             height={40}
@@ -289,7 +297,12 @@ const Header = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={"#"}>
+                                    <Link
+                                        href={"#"}
+                                        onClick={(e) =>
+                                            i18n.changeLanguage("en")
+                                        }
+                                    >
                                         <Image
                                             width={40}
                                             height={40}
@@ -302,8 +315,12 @@ const Header = () => {
                             </ul>
                         </li>
                     </ul>
-                    <Link href={"#contact"} className="header__btn">
-                        Contact
+                    <Link
+                        href={"#contact"}
+                        className="header__btn"
+                        onClick={() => setShow(false)}
+                    >
+                        {t("Contact")}
                     </Link>
                 </nav>
                 <button onClick={() => setShow(true)} className={`header__bar`}>

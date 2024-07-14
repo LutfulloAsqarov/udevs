@@ -17,55 +17,58 @@ const Footer = () => {
                         <ul className="footer__list">
                             <h3>About us</h3>
                             <li className="footer__item">
-                                <Link href={"#"}>Direction</Link>
+                                <Link href={"#services"}>Direction</Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>Command</Link>
+                                <Link href={"#team"}>Command</Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>Tools</Link>
+                                <Link href={"#tools"}>Tools</Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>Clients</Link>
+                                <Link href={"#clients"}>Clients</Link>
                             </li>
                         </ul>
                         <ul className="footer__list">
                             <h3>Services</h3>
                             <li className="footer__item">
-                                <Link href={"#"}>
+                                <Link href={"#mobile"}>
                                     Development of mobile applications
                                 </Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>
+                                <Link href={"#erp"}>
                                     Development and implementation ERP systems
                                 </Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>
+                                <Link href={"#design"}>
                                     User interface, User experience design IT
                                     consulting
                                 </Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>
+                                <Link href={"#opt"}>
                                     Optimization IT consulting infrastructure
                                 </Link>
+                            </li>
+                            <li className="footer__item">
+                                <Link href={"#it"}>IT consulting</Link>
                             </li>
                         </ul>
                         <ul className="footer__list">
                             <h3>Services</h3>
                             <li className="footer__item">
-                                <Link href={"#"}>Delever</Link>
+                                <Link href={"#delever"}>Delever</Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>Sms.uz</Link>
+                                <Link href={"#sms"}>Sms.uz</Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>Goodzone</Link>
+                                <Link href={"#goodzone"}>Goodzone</Link>
                             </li>
                             <li className="footer__item">
-                                <Link href={"#"}>Iman</Link>
+                                <Link href={"#iman"}>Iman</Link>
                             </li>
                         </ul>
                     </div>

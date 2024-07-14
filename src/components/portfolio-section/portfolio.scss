@@ -73,6 +73,7 @@
         width: 50%;
         img {
             width: 100%;
+            height: auto;
             object-fit: contain;
         }
     }
@@ -95,8 +96,8 @@
             display: none;
         }
         &__img-media {
-            width: 100%;
             display: block;
+            width: 100%;
             img {
                 width: 100%;
                 object-fit: contain;
@@ -114,11 +115,12 @@
         }
     }
     @media (max-width: 450px) {
-        &__img,
         &__img-media {
             height: 300px;
+            width: 100%;
             img {
                 height: 100%;
+                width: 100%;
             }
         }
     }

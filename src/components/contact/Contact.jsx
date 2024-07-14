@@ -8,18 +8,8 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-
-import * as Yup from "yup";
 import { TextField } from "@mui/material";
 import "./contact.scss";
-
-const SignupSchema = Yup.object().shape({
-    name: Yup.string()
-        .min(2, "Too Short!")
-        .max(50, "Too Long!")
-        .required("Required"),
-    email: Yup.string().email("Invalid email").required("Required"),
-});
 
 const Contact = () => {
     return (

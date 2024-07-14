@@ -14,8 +14,6 @@ const Tools = () => {
         );
     };
 
-    console.log(value);
-
     let toolsItems = TOOLS.map((el) => (
         <div
             key={el.id}
