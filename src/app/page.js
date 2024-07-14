@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 import Hero from "@/components/hero/Hero";
 import Services from "@/components/services/Services";
 import Team from "@/components/team/Team";
@@ -20,6 +19,8 @@ import PortfolioSection from "@/components/portfolio-section/PortfolioSection";
 import Work from "@/components/work/Work";
 import Contact from "@/components/contact/Contact";
 import Tools from "@/components/tools/Tools";
+import chat from "@/assets/chat.png";
+import "./module.scss";
 
 export default function Home() {
     return (
@@ -40,6 +41,9 @@ export default function Home() {
             <PortfolioSection data={IMAN} sectionID={"iman"} />
             <Work />
             <Contact />
+            <div className="chat__img">
+                <Image width={60} height={60} src={chat} alt="chat" />
+            </div>
         </main>
     );
 }
